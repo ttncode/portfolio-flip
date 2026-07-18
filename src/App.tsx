@@ -1,3 +1,10 @@
+import { ThemeProvider } from './theme/ThemeProvider'
+import { Magazine } from './components/Magazine'
+
 export default function App() {
-  return <div id="app-root">Portfolio Flip</div>
+  return (
+    <ThemeProvider>
+      <Magazine />
+    </ThemeProvider>
+  )
 }
