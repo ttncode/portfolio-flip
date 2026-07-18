@@ -1,4 +1,4 @@
-import { useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import HTMLFlipBookImport from 'react-pageflip'
 import { useResponsiveMode } from '../hooks/useResponsiveMode'
 import { content } from '../content/content'
@@ -11,6 +11,8 @@ import { SkillsPage } from '../pages/SkillsPage'
 import { EducationPage } from '../pages/EducationPage'
 import { ContactPage } from '../pages/ContactPage'
 import { BackCoverPage } from '../pages/BackCoverPage'
+import { Toolbar } from './Toolbar'
+import { ThemeSwitcher } from './ThemeSwitcher'
 
 // react-pageflip's bundled types require every IFlipSetting prop (no Partial<>);
 // cast to any rather than enumerate ~20 settings we don't otherwise need.
@@ -23,13 +25,15 @@ const prefersReduced =
 export function Magazine() {
   const mode = useResponsiveMode()
   const book = useRef<any>(null)
-  const jump = (page: number) => book.current?.pageFlip()?.flip(page)
+  const [page, setPage] = useState(0)
+  const flipTo = (p: number) => book.current?.pageFlip()?.flip(p)
+  const next = () => book.current?.pageFlip()?.flipNext()
+  const prev = () => book.current?.pageFlip()?.flipPrev()
 
-  // Stable page list; each direct child MUST forward a ref (react-pageflip clones them).
   const pages = useMemo(
     () => [
       <CoverPage key="cover" />,
-      <ContentsPage key="contents" onJump={jump} />,
+      <ContentsPage key="contents" onJump={flipTo} />,
       <AboutPage key="about" />,
       <ExperiencePage key="exp0" item={content.experience.items[0]} side="left" folio="Work · 04" />,
       <ExperiencePage key="exp1" item={content.experience.items[1]} side="right" folio="Work · 05" />,
@@ -45,26 +49,40 @@ export function Magazine() {
     [],
   )
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') next()
+      if (e.key === 'ArrowLeft') prev()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   return (
-    <div className="stage">
-      <HTMLFlipBook
-        ref={book}
-        width={460}
-        height={620}
-        size="stretch"
-        minWidth={300}
-        maxWidth={560}
-        minHeight={420}
-        maxHeight={760}
-        showCover
-        usePortrait={mode === 'single'}
-        mobileScrollSupport
-        drawShadow={!prefersReduced}
-        flippingTime={prefersReduced ? 0 : 700}
-        className="magazine"
-      >
-        {pages}
-      </HTMLFlipBook>
-    </div>
+    <>
+      <ThemeSwitcher />
+      <div className="stage">
+        <HTMLFlipBook
+          ref={book}
+          width={460}
+          height={620}
+          size="stretch"
+          minWidth={300}
+          maxWidth={560}
+          minHeight={420}
+          maxHeight={760}
+          showCover
+          usePortrait={mode === 'single'}
+          mobileScrollSupport
+          drawShadow={!prefersReduced}
+          flippingTime={prefersReduced ? 0 : 700}
+          className="magazine"
+          onFlip={(e: { data: number }) => setPage(e.data)}
+        >
+          {pages}
+        </HTMLFlipBook>
+      </div>
+      <Toolbar page={page} total={pages.length} onPrev={prev} onNext={next} />
+    </>
   )
 }
