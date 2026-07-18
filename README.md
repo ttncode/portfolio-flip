@@ -1,32 +1,21 @@
-# React + TypeScript + Vite
+# Portfolio Flip — Truong Trung Nghia
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Magazine-style flipbook portfolio. React + Vite + TypeScript, `react-pageflip`, 6 switchable themes (default Gallery Gold). Content lives in `content.json`.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Develop
+```bash
+export NVM_DIR="$HOME/.nvm"; . "$NVM_DIR/nvm.sh"   # if using nvm
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Test
+```bash
+npm test
+```
+
+## Edit content
+All copy is in `content.json`. Change it and the site updates. Avatar: replace `public/avatar.jpg`.
+
+## Deploy (Vercel, free)
+Push to a Git repo, import into Vercel. Framework preset: Vite. Build: `npm run build`, output: `dist`. `vercel.json` handles SPA routing.
