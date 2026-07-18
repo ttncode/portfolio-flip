@@ -72,6 +72,26 @@ button{font:inherit;cursor:pointer}
   .page{transition:none !important}
 }
 
+.theme-switcher{position:fixed;top:18px;right:18px;z-index:20;display:flex;gap:8px;
+  background:rgba(255,255,255,.7);backdrop-filter:blur(8px);padding:8px 10px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.15)}
+.theme-dot{width:20px;height:20px;border-radius:50%;border:2px solid #fff;outline:1px solid rgba(0,0,0,.15);padding:0}
+.theme-dot.active{transform:scale(1.15);outline:2px solid #333}
+.theme-dot[data-theme-dot='gallery-gold']{background:#A16207}
+.theme-dot[data-theme-dot='mono-blue']{background:#2563EB}
+.theme-dot[data-theme-dot='editorial-ink']{background:#EC4899}
+.theme-dot[data-theme-dot='nocturne']{background:#0B0B0D}
+.theme-dot[data-theme-dot='terracotta']{background:#B4532A}
+.theme-dot[data-theme-dot='bauhaus']{background:#2555E0}
+
+.toolbar{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:20;display:flex;
+  align-items:center;gap:14px;background:rgba(255,255,255,.75);backdrop-filter:blur(8px);
+  padding:8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.15)}
+.nav-btn{width:34px;height:34px;border-radius:50%;border:none;background:#111;color:#fff;font-size:18px;line-height:1}
+.counter{font-size:11px;letter-spacing:.1em;color:#333}
+.progress{width:120px;height:3px;background:rgba(0,0,0,.15);border-radius:2px;overflow:hidden}
+.progress span{display:block;height:100%;background:#111;transition:width .3s}
+@media (max-width:1024px){.progress{width:70px}}
+
 /* Mobile single page */
 @media (max-width:1024px){
   .pg{padding:26px 24px}
