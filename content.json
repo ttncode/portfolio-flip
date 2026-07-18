@@ -7,15 +7,6 @@
     "url": "https://ttndev.com"
   },
 
-  "nav": [
-    { "label": "About", "href": "#about" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Education", "href": "#education" },
-    { "label": "Contact", "href": "#contact" }
-  ],
-
   "hero": {
     "badge": "Open to opportunities",
     "name": "Truong Trung Nghia",
@@ -32,7 +23,7 @@
       { "type": "email", "label": "nghiatt1410@gmail.com", "href": "mailto:nghiatt1410@gmail.com" },
       { "type": "phone", "label": "076-743-3579", "href": "tel:+84767433579" }
     ],
-    "avatar": "assets/images/avatar.jpeg",
+    "avatar": "/avatar.jpg",
     "stats": [
       { "num": "2+", "label": "Years Exp" },
       { "num": "7+", "label": "Projects" },
