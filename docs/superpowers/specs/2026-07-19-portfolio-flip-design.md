@@ -28,19 +28,20 @@ A modern, sophisticated, clean personal portfolio that reads and behaves like a 
 
 ## Theme System
 
-Five themes, each a set of CSS custom properties (color + font + radius tokens). Default is **Gallery Gold**.
+Six themes, each a set of CSS custom properties (color + font + radius tokens + per-theme motif). Default is **Gallery Gold**.
 
-| Theme | Paper | Ink | Accent | Display font | Body font | Label font |
-|-------|-------|-----|--------|--------------|-----------|------------|
-| **Gallery Gold** (default) | `#FFFFFF` | `#171717` | `#A16207` | Cormorant Garamond | Inter | Inter |
-| Mono Blue | `#FAFAFA` | `#09090B` | `#2563EB` | Playfair Display 900 | Inter | JetBrains Mono |
-| Editorial Ink | `#FAFAFA` | `#09090B` | `#EC4899` | Libre Bodoni | Public Sans | Public Sans |
-| Nocturne (dark) | `#0B0B0D` | `#EDEDEF` | `#F59E0B` | Playfair Display | Inter | JetBrains Mono |
-| Swiss Grid | `#F3F2EC` | `#141414` | `#DC2626` | DM Sans | DM Sans | DM Sans |
+| Theme | Paper | Ink | Accent | Display font | Body font | Label font | Motif |
+|-------|-------|-----|--------|--------------|-----------|------------|-------|
+| **Gallery Gold** (default) | `#FFFFFF` | `#171717` | `#A16207` | Cormorant Garamond | Inter | Inter | Centered luxury annual, thin gold rules |
+| Mono Blue | `#FAFAFA` | `#09090B` | `#2563EB` | Playfair Display 900 | Inter | JetBrains Mono | Airy, blue dot monogram, mono labels |
+| Editorial Ink | `#FAFAFA` | `#09090B` | `#EC4899` | Libre Bodoni | Public Sans | Public Sans | Bold Bodoni masthead, magenta kicker |
+| Nocturne (dark) | `#0B0B0D` | `#EDEDEF` | `#F59E0B` | Playfair Display | Inter | JetBrains Mono | Near-black paper, amber glow |
+| Terracotta Warm | `#F6EEE3` | `#2B2320` | `#B4532A` | Fraunces (900) | Inter | Inter | Warm clay paper, circle seal, soft-serif |
+| Bauhaus Blocks | `#F4F1E9` | `#141414` | `#2555E0` | Archivo (900) | Inter | Archivo | Constructivist corner blocks, uppercase |
 
-Full token set per theme (paper, ink, accent, accent-soft, muted, muted2, border, card, spine, radius, display/body/label font + display weight + label letter-spacing) mirrors the approved brainstorm mockups in `.superpowers/brainstorm/`.
+Full token set per theme (paper, ink, accent, accent-soft, muted, muted2, border, card, spine, radius, display/body/label font + display weight + label letter-spacing + motif) mirrors the approved brainstorm mockups in `.superpowers/brainstorm/`.
 
-**Switcher:** fixed toolbar in a screen corner (outside the book), lists the 5 themes. Selection sets a `data-theme` attribute on the root and writes `localStorage`. On load, read `localStorage` (fallback Gallery Gold). Swap is instant — no reload. All Google Fonts for all themes are loaded up front (small) so switching never flashes unstyled text.
+**Switcher:** fixed toolbar in a screen corner (outside the book), lists the 6 themes. Selection sets a `data-theme` attribute on the root and writes `localStorage`. On load, read `localStorage` (fallback Gallery Gold). Swap is instant — no reload. All Google Fonts for all themes are loaded up front (small) so switching never flashes unstyled text.
 
 ## Magazine Structure
 
