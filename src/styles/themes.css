@@ -1,0 +1,46 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Bodoni:wght@400;500;700&family=Public+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Archivo:wght@500;700;900&display=swap');
+
+:root[data-theme='gallery-gold']{
+  --paper:#FFFFFF;--ink:#171717;--accent:#A16207;--accent-soft:#FBF3E2;--muted:#737373;--muted2:#404040;
+  --border:#E5E5E5;--card:#FFFFFF;--spine:rgba(0,0,0,.04);--radius:8px;
+  --font-display:'Cormorant Garamond',serif;--font-body:'Inter',sans-serif;--font-label:'Inter',sans-serif;
+  --display-weight:600;--label-ls:.28em;--display-transform:none;
+}
+:root[data-theme='mono-blue']{
+  --paper:#FAFAFA;--ink:#09090B;--accent:#2563EB;--accent-soft:#EFF4FF;--muted:#64748B;--muted2:#3F3F46;
+  --border:#E4E4E7;--card:#FFFFFF;--spine:rgba(0,0,0,.06);--radius:9px;
+  --font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;--font-label:'JetBrains Mono',monospace;
+  --display-weight:900;--label-ls:.26em;--display-transform:none;
+}
+:root[data-theme='editorial-ink']{
+  --paper:#FAFAFA;--ink:#09090B;--accent:#EC4899;--accent-soft:#FDEAF4;--muted:#64748B;--muted2:#3F3F46;
+  --border:#E4E4E7;--card:#FFFFFF;--spine:rgba(0,0,0,.06);--radius:6px;
+  --font-display:'Libre Bodoni',serif;--font-body:'Public Sans',sans-serif;--font-label:'Public Sans',sans-serif;
+  --display-weight:700;--label-ls:.2em;--display-transform:none;
+}
+:root[data-theme='nocturne']{
+  --paper:#0B0B0D;--ink:#EDEDEF;--accent:#F59E0B;--accent-soft:rgba(245,158,11,.14);--muted:#8A8A93;--muted2:#B8B8C0;
+  --border:rgba(255,255,255,.13);--card:#141418;--spine:rgba(0,0,0,.5);--radius:9px;
+  --font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;--font-label:'JetBrains Mono',monospace;
+  --display-weight:700;--label-ls:.26em;--display-transform:none;
+}
+:root[data-theme='terracotta']{
+  --paper:#F6EEE3;--ink:#2B2320;--accent:#B4532A;--accent-soft:#F0DFCB;--muted:#8A7A63;--muted2:#5C5147;
+  --border:#DBC9B4;--card:#FCF6EC;--spine:rgba(0,0,0,.045);--radius:12px;
+  --font-display:'Fraunces',serif;--font-body:'Inter',sans-serif;--font-label:'Inter',sans-serif;
+  --display-weight:900;--label-ls:.18em;--display-transform:none;
+}
+:root[data-theme='bauhaus']{
+  --paper:#F4F1E9;--ink:#141414;--accent:#2555E0;--accent-soft:#DBE3FB;--muted:#555555;--muted2:#333333;
+  --border:#D8D3C6;--card:#FCFAF3;--spine:rgba(0,0,0,.05);--radius:0px;
+  --font-display:'Archivo',sans-serif;--font-body:'Inter',sans-serif;--font-label:'Archivo',sans-serif;
+  --display-weight:900;--label-ls:.12em;--display-transform:uppercase;
+}
+/* Motif: Bauhaus red corner block on left pages */
+:root[data-theme='bauhaus'] .pg.left::before{
+  content:"";position:absolute;top:0;right:0;width:76px;height:76px;background:#E23B2E;border-radius:0 0 0 76px;z-index:1;
+}
+:root[data-theme='bauhaus'] .eyebrow, :root[data-theme='bauhaus'] .toc-h{position:relative;z-index:2}
+/* Motif: Gallery Gold centers cover + about headings */
+:root[data-theme='gallery-gold'] .cover-inner{text-align:center;align-items:center}
