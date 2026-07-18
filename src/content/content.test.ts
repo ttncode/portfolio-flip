@@ -11,6 +11,6 @@ describe('content model', () => {
     expect(content.experience.items).toHaveLength(2)
   })
   it('no longer exposes nav', () => {
-    expect((content as Record<string, unknown>).nav).toBeUndefined()
+    expect((content as unknown as Record<string, unknown>).nav).toBeUndefined()
   })
 })
