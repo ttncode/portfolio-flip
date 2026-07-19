@@ -20,7 +20,7 @@ export const ContentsPage = forwardRef<HTMLDivElement, Props>(({ onJump }, ref) 
     {ENTRIES.map((e) => (
       <div className="toc-row" key={e.t}>
         <span>
-          <button className="p t" style={{ all: 'unset', cursor: 'pointer' }} onClick={() => onJump(e.page)}>
+          <button className="toc-link" onClick={() => onJump(e.page)}>
             <span className="t">{e.t}</span>
           </button>
           <span className="s">{e.s}</span>
