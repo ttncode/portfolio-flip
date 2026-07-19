@@ -46,7 +46,10 @@ portfolio-flip/
 │   ├── content/content.ts   # Typed access to content.json
 │   └── styles/              # global.css + themes.css (token blocks)
 ├── index.html              # Meta/OG tags, entry point
-└── vercel.json             # SPA routing (asset-safe rewrite)
+├── vercel.json             # SPA routing (asset-safe rewrite)
+├── Dockerfile              # Multi-stage: dev / build / prod (nginx)
+├── docker-compose.yml      # dev (HMR) + prod (nginx) profiles
+└── nginx.conf              # Prod SPA config, MIME, asset caching
 ```
 
 ## Pages
@@ -71,6 +74,20 @@ npm run dev
 ```
 
 Test: `npm test`  ·  Build: `npm run build` (output: `dist`)
+
+## Docker (optional)
+
+Vercel is the primary deploy; Docker is an optional, portable self-host path.
+
+```bash
+# Dev server with hot reload → http://localhost:5173
+docker compose --profile dev up
+
+# Production nginx serving the built site → http://localhost:8080
+docker compose --profile prod up --build
+```
+
+The `prod` stage builds the site and serves it via nginx (SPA fallback, correct MIME, immutable asset caching). No change to the Vercel deploy.
 
 ## Edit content
 
