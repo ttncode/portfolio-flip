@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>📖 portfolio-flip</h1>
+  <h1>🌐 portfolio-flip</h1>
   <p>
     <strong>Magazine-style flipbook portfolio for Truong Trung Nghia, Full Stack Developer.</strong><br>
     A resume in — a page-turning, theme-switchable magazine out.
