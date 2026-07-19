@@ -4,6 +4,14 @@ body{margin:0;background:#2a2a2e;color:var(--ink);font-family:var(--font-body);
   -webkit-font-smoothing:antialiased;overflow:hidden}
 button{font:inherit;cursor:pointer}
 
+/* Smooth theme switch: full-page crossfade (View Transitions API) */
+::view-transition-old(root),::view-transition-new(root){
+  animation-duration:.55s;animation-timing-function:cubic-bezier(.4,0,.2,1);mix-blend-mode:normal}
+/* Fallback for browsers without View Transitions: animate token-driven colors */
+*,*::before,*::after{transition:background-color .45s cubic-bezier(.4,0,.2,1),
+  border-color .45s cubic-bezier(.4,0,.2,1),color .45s cubic-bezier(.4,0,.2,1),
+  outline-color .45s cubic-bezier(.4,0,.2,1)}
+
 .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:24px}
 
 /* react-pageflip pages */
@@ -70,11 +78,12 @@ button{font:inherit;cursor:pointer}
 /* Reduced motion: kill flip animation shadows */
 @media (prefers-reduced-motion: reduce){
   .page{transition:none !important}
+  *,*::before,*::after{transition:none !important}
 }
 
 .theme-switcher{position:fixed;top:18px;right:18px;z-index:20;display:flex;gap:8px;
   background:rgba(255,255,255,.7);backdrop-filter:blur(8px);padding:8px 10px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.15)}
-.theme-dot{width:20px;height:20px;border-radius:50%;border:2px solid #fff;outline:1px solid rgba(0,0,0,.15);padding:0}
+.theme-dot{width:20px;height:20px;border-radius:50%;border:2px solid #fff;outline:1px solid rgba(0,0,0,.15);padding:0;transition:transform .25s ease,outline .2s ease}
 .theme-dot.active{transform:scale(1.15);outline:2px solid #333}
 .theme-dot[data-theme-dot='gallery-gold']{background:#A16207}
 .theme-dot[data-theme-dot='mono-blue']{background:#2563EB}
