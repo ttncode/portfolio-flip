@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "name": "Truong Trung Nghia",
+    "title": "Truong Trung Nghia — Full Stack Developer",
+    "description": "Portfolio of Truong Trung Nghia, a Full Stack Developer with 2+ years of experience building enterprise-grade web applications in PHP, Laravel, CodeIgniter, and React.",
+    "ogDescription": "Full Stack Developer with 2+ years of experience across Fintech, E-commerce, IoT, SaaS, Booking, and ERP domains.",
+    "url": "https://ttndev.com"
+  },
+
+  "hero": {
+    "badge": "Open to opportunities",
+    "name": "Truong Trung Nghia",
+    "role": "Full Stack Developer",
+    "summary": "I build enterprise-grade web applications in PHP (Laravel, CodeIgniter) and React — shipping 7+ production systems across Fintech, E-commerce, IoT, SaaS, Booking, and ERP over 2+ years, from multi-tenant architecture to real-time IoT pipelines.",
+    "chips": ["PHP / Laravel", "React", "RESTful APIs", "MySQL / PostgreSQL", "AWS", "Docker"],
+    "actions": [
+      { "label": "View Projects", "href": "#projects" },
+      { "label": "See Experience", "href": "#experience" }
+    ],
+    "contacts": [
+      { "type": "github", "label": "GitHub", "href": "https://github.com/ttndevfullstack" },
+      { "type": "linkedin", "label": "LinkedIn", "href": "https://www.linkedin.com/in/truong-trung-nghia-21b488299/" },
+      { "type": "email", "label": "nghiatt1410@gmail.com", "href": "mailto:nghiatt1410@gmail.com" },
+      { "type": "phone", "label": "076-743-3579", "href": "tel:+84767433579" }
+    ],
+    "avatar": "/avatar.jpg",
+    "stats": [
+      { "num": "2+", "label": "Years Exp" },
+      { "num": "7+", "label": "Projects" },
+      { "num": "80%", "label": "Time Saved" }
+    ]
+  },
+
+  "about": {
+    "eyebrow": "About Me",
+    "title": "Turning complex problems into elegant solutions",
+    "cards": [
+      {
+        "title": "Enterprise Focus",
+        "desc": "Specializing in PHP (Laravel, CodeIgniter) and React for high-throughput production systems serving thousands of users."
+      },
+      {
+        "title": "Clean Architecture",
+        "desc": "Follows SOLID principles, Clean Code practices, and MVC/OOP patterns to build maintainable, scalable codebases."
+      },
+      {
+        "title": "Security First",
+        "desc": "Builds with CSRF protection, OAuth2, JWT, RBAC, and AWS security best practices from day one."
+      },
+      {
+        "title": "Measurable Impact",
+        "desc": "~80% accounting time saved, 60% faster checkouts, 90%+ anomaly reduction — engineering choices that move metrics."
+      }
+    ]
+  },
+
+  "experience": {
+    "eyebrow": "Work History",
+    "title": "Experience",
+    "items": [
+      {
+        "company": "TPS Software",
+        "role": "Full Stack Developer",
+        "location": "Tan Binh, TP.HCM",
+        "period": "Apr 2025 – Present",
+        "current": true,
+        "bullets": [
+          "Built B2B2C digital checkout pipeline serving 1,000+ municipalities on multi-tenant architecture",
+          "Engineered automated financial reconciliation engine — ~80% reduction in accounting time",
+          "Designed digital loyalty coin system (Furusato Nozei) — 25% increase in repeat usage",
+          "Built RBAC role management dashboard — 50% faster admin onboarding"
+        ],
+        "tech": ["Laravel", "React", "AWS", "Redis", "MySQL", "Stripe"]
+      },
+      {
+        "company": "QASoft Solution",
+        "role": "Full Stack Developer",
+        "location": "Thu Duc, TP.HCM",
+        "period": "Sep 2023 – Apr 2025",
+        "current": false,
+        "bullets": [
+          "Delivered 5+ production projects across Fintech, E-commerce, SaaS, Booking, and ERP domains",
+          "Integrated Stripe and PayPal payment gateways with retry logic and webhook verification",
+          "Implemented CSRF protection, OAuth2 flows, and JWT-based auth across all projects",
+          "Deployed and managed services on AWS EC2, S3, Lambda, and CloudFront"
+        ],
+        "tech": ["Laravel", "CodeIgniter", "React", "AWS", "OAuth2", "Docker"]
+      }
+    ]
+  },
+
+  "projects": {
+    "eyebrow": "Featured Work",
+    "title": "Projects",
+    "items": [
+      {
+        "name": "Unioss",
+        "tag": "E-commerce · IoT",
+        "period": "Jun 2024 – Nov 2024",
+        "desc": "Furusato Nozei e-commerce + IoT vending machine platform for 1,000+ Japanese municipalities — multi-tenant, loyalty coins, financial reconciliation, real-time IoT terminals.",
+        "metrics": [
+          { "num": "80%", "label": "Accounting time saved" },
+          { "num": "60%", "label": "Faster IoT checkout" },
+          { "num": "90%+", "label": "Anomaly reduction" },
+          { "num": "25%", "label": "Repeat usage up" }
+        ],
+        "features": [
+          "IoT vending machine terminal integration",
+          "Order state machine — 90%+ anomaly reduction",
+          "Digital wallet & loyalty coin system",
+          "Multi-tenant admin for 1,000+ municipalities"
+        ],
+        "tech": ["Laravel", "React", "MySQL", "AWS", "Redis", "Docker"],
+        "team": "8 engineers"
+      },
+      {
+        "name": "Nippoh",
+        "tag": "IoT · SaaS · B2B",
+        "period": "Apr 2024 – Present",
+        "desc": "B2B IoT construction monitoring SaaS — real-time sensor ingestion via AWS IoT Core/MQTT, WebAssembly 3D visualization, cryptographic tamper detection, Azure AD SSO.",
+        "metrics": [
+          { "num": "99.9%", "label": "IoT Stability" },
+          { "num": "~40%", "label": "Site safety up" },
+          { "num": "500ms", "label": "Render Latency" },
+          { "num": "100%", "label": "Audit Compliance" }
+        ],
+        "features": [
+          "AWS IoT Core + MQTT real-time sensor pipeline",
+          "React SPA with WebAssembly 3D visualization",
+          "Cryptographic tamper detection for compliance",
+          "Azure AD SSO for enterprise authentication"
+        ],
+        "tech": ["Laravel", "React", "AWS IoT", "MQTT", "WASM", "Azure AD"],
+        "team": "6 engineers"
+      },
+      {
+        "name": "Nail Booking",
+        "tag": "Booking · Multi-tenant",
+        "period": "Jun 2024 – Nov 2024",
+        "desc": "Multi-platform booking system for salon chains — multi-tenant architecture, OAuth2 social login, background job scheduling, performance-optimized APIs.",
+        "metrics": [
+          { "num": "60%", "label": "Response time down" },
+          { "num": "35%", "label": "Error rate down" },
+          { "num": "50k+", "label": "Monthly Bookings" },
+          { "num": "92%", "label": "Client Retention" }
+        ],
+        "features": [
+          "Multi-tenant architecture for salon brands",
+          "OAuth2 + JWT refresh token auth flow",
+          "Background job scheduling (reminders, notifications)",
+          "35% error reduction via comprehensive test coverage"
+        ],
+        "tech": ["Laravel", "React", "MySQL", "Redis", "OAuth2", "Docker"],
+        "team": "6 engineers"
+      },
+      {
+        "name": "Misa ERP",
+        "tag": "ERP · Enterprise",
+        "period": "Dec 2023 – Jun 2024",
+        "desc": "Enterprise Resource Planning system for Misa Group — multi-layer modular architecture, RBAC across departments, Redis HA cluster, CI/CD pipeline, mobile REST API.",
+        "metrics": [
+          { "num": "85%", "label": "Code Reuse" },
+          { "num": "5k+", "label": "Concurrent Users" },
+          { "num": "99.9%", "label": "Uptime (HA)" },
+          { "num": "70%", "label": "Faster Deployment" }
+        ],
+        "features": [
+          "Multi-layer modularization by business domain",
+          "RBAC across all departments and user roles",
+          "Redis master-slave + Sentinel high availability",
+          "CI/CD with GitHub Actions + Docker deployment"
+        ],
+        "tech": ["Laravel", "React", "MySQL", "Redis", "AWS S3", "GitHub CI"],
+        "team": "8 engineers"
+      }
+    ]
+  },
+
+  "skills": {
+    "eyebrow": "Technical Skills",
+    "title": "Skills & Expertise",
+    "groups": [
+      { "title": "Languages", "items": ["HTML5", "CSS3", "PHP", "JavaScript", "TypeScript", "Python"] },
+      { "title": "Frameworks", "items": ["Laravel", "CodeIgniter", "React", "Vue", "Tailwind CSS", "Bootstrap", "jQuery"] },
+      { "title": "APIs & Protocols", "items": ["RESTful APIs", "GraphQL", "WebSocket", "gRPC"] },
+      { "title": "Databases & Storage", "items": ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "Redis", "Memcached", "AWS S3"] },
+      { "title": "Version Control", "items": ["Git", "GitHub", "GitLab", "Bitbucket"] },
+      { "title": "DevOps & Testing", "items": ["Docker", "AWS EC2", "Nginx", "Linux", "PHPUnit", "Jest", "SonarQube"] },
+      { "title": "Tools", "items": ["VS Code", "Postman", "Swagger", "Figma", "Jira", "Cursor", "Claude Code"] },
+      { "title": "Soft Skills", "items": ["Problem-solving", "Analytical Thinking", "Adaptability", "Self-learning", "Teamwork", "English"] }
+    ]
+  },
+
+  "education": {
+    "eyebrow": "Background",
+    "title": "Education & Certifications",
+    "degree": {
+      "title": "Bachelor of Science — Information Technology",
+      "school": "Hutech University",
+      "location": "Thu Duc, TP.HCM",
+      "period": "Sep 2021 – Sep 2025"
+    },
+    "certifications": [
+      { "name": "Problem Solving", "issuer": "HackerRank", "date": "Jul 2024" },
+      { "name": "JSON Path Test", "issuer": "KodeKloud", "date": "Aug 2024" },
+      { "name": "Backend Development & APIs", "issuer": "FreeCodeCamp", "date": "Aug 2024" }
+    ]
+  },
+
+  "contact": {
+    "title": "Let's build something great",
+    "desc": "Open to full-time roles and freelance work. Reach out and I'll get back to you within a day.",
+    "actions": [
+      { "label": "Say Hello", "href": "mailto:nghiatt1410@gmail.com" },
+      { "label": "Call Me", "href": "tel:+84767433579" }
+    ],
+    "footerName": "Truong Trung Nghia",
+    "socials": [
+      { "type": "github", "href": "https://github.com/ttndevfullstack" },
+      { "type": "linkedin", "href": "https://www.linkedin.com/in/truong-trung-nghia-21b488299/" }
+    ],
+    "footerNote": "Built with passion · 2025"
+  }
+}
