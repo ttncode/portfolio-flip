@@ -4,7 +4,7 @@
     "title": "Truong Trung Nghia — Full Stack Developer",
     "description": "Portfolio of Truong Trung Nghia, a Full Stack Developer with 2+ years of experience building enterprise-grade web applications in PHP, Laravel, CodeIgniter, and React.",
     "ogDescription": "Full Stack Developer with 2+ years of experience across Fintech, E-commerce, IoT, SaaS, Booking, and ERP domains.",
-    "url": "https://ttndev.com"
+    "url": "https://ttncode.qzz.io/"
   },
 
   "hero": {
@@ -18,7 +18,7 @@
       { "label": "See Experience", "href": "#experience" }
     ],
     "contacts": [
-      { "type": "github", "label": "GitHub", "href": "https://github.com/ttndevfullstack" },
+      { "type": "github", "label": "GitHub", "href": "https://github.com/ttncode" },
       { "type": "linkedin", "label": "LinkedIn", "href": "https://www.linkedin.com/in/truong-trung-nghia-21b488299/" },
       { "type": "email", "label": "nghiatt1410@gmail.com", "href": "mailto:nghiatt1410@gmail.com" },
       { "type": "phone", "label": "076-743-3579", "href": "tel:+84767433579" }
@@ -216,7 +216,7 @@
     ],
     "footerName": "Truong Trung Nghia",
     "socials": [
-      { "type": "github", "href": "https://github.com/ttndevfullstack" },
+      { "type": "github", "href": "https://github.com/ttncode" },
       { "type": "linkedin", "href": "https://www.linkedin.com/in/truong-trung-nghia-21b488299/" }
     ],
     "footerNote": "Built with passion · 2025"
